@@ -1,9 +1,6 @@
-# t = [i for i in range(11)]
-# y = [i*i for i in t]
+t = [i for i in range(11)]
+y = [i*i for i in t]
 
-for i in range(11):
-    t.append(i)
-    y.append(i**2)
 
 ty1 = [t,y]
 ty2 = [[i,j] for i,j in zip(t,y)]
