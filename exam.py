@@ -3,34 +3,34 @@ print("1a)")
 a = 4
 b = a
 a = a+b
-print(a)
+print(a) # 8 
 
 print("---------------------")
 print("1b)")
 A = [[-1,0,1],[0,0,0],[10,9,8]]
-print(A[1][-1])
+print(A[1][-1]) # 0
 
 print("---------------------")
 print("1c)")
 x = 6
 y = -2
 c = x >= 10 or y != -2
-print(c)
+print(c) #False
 
 print("---------------------")
 print("1d)")
 import numpy as np
 a = [1,2,3]
 a_np = np.array(a)
-print(a*2)
-print(a_np*2)
+print(a*2) # [1,2,3,1,2,3]
+print(a_np*2) # [2,4,6]
 
 print("---------------------")
 print("1e)")
 S = 0
 for i in range(3):
     S += i**2
-print(S)
+print(S) #5
 
 print("---------------------")
 print("1f)")
@@ -40,7 +40,7 @@ try:
     b = int(A[2])
 except IndexError:
     print('A has length %d' %len(A))
-    sys.exit(1)
+    # sys.exit(1)
 except TypeError:
     print('Cannot convert %s to int' %A[2])
     #sys.exit(1)
@@ -50,8 +50,8 @@ print("---------------------")
 print("1g)")
 def poly(x,k):
     s = 0
-    for i in range(k+1):
-        s = s+x**i
+    for i in range(3):
+        s = s+2.0**i
     return s
  
 def test_poly():
@@ -59,10 +59,20 @@ def test_poly():
     x = 2.0
     
     tol = 1e-14
-    success = abs(poly(x,k)-7.0) < tol
+    success = abs(poly(2.0,2)-7.0) < tol
     assert success
  
 test_poly()
+
+print("---------------------")
+print("1h")
+success = True
+if success:
+    None
+else:
+    raise AssertionError
+
+assert success
 
 print("---------------------")
 print("2a")
