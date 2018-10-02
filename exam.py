@@ -1,39 +1,39 @@
-print "---------------------"
-print "1a)"
+print("---------------------")
+print("1a)")
 a = 4
 b = a
 a = a+b
 print(a)
 
-print "---------------------"
-print "1b)"
+print("---------------------")
+print("1b)")
 A = [[-1,0,1],[0,0,0],[10,9,8]]
 print(A[1][-1])
 
-print "---------------------"
-print "1c)"
+print("---------------------")
+print("1c)")
 x = 6
 y = -2
 c = x >= 10 or y != -2
 print(c)
 
-print "---------------------"
-print "1d)"
+print("---------------------")
+print("1d)")
 import numpy as np
 a = [1,2,3]
 a_np = np.array(a)
 print(a*2)
 print(a_np*2)
 
-print "---------------------"
-print "1e)"
+print("---------------------")
+print("1e)")
 S = 0
 for i in range(3):
     S += i**2
 print(S)
 
-print "---------------------"
-print "1f)"
+print("---------------------")
+print("1f)")
 import sys
 A = [['-1','0','1'],['0','0','0'],['10','9','8']]
 try:
@@ -46,8 +46,8 @@ except TypeError:
     #sys.exit(1)
 #print(b)
 
-print "---------------------"
-print "1g)"
+print("---------------------")
+print("1g)")
 def poly(x,k):
     s = 0
     for i in range(k+1):
@@ -64,8 +64,8 @@ def test_poly():
  
 test_poly()
 
-print "---------------------"
-print "2a"
+print("---------------------")
+print("2a")
 
 infile = open("data.txt","r")
 infile.readline()
@@ -82,8 +82,8 @@ for line in infile:
 
 
 
-print "---------------------"
-print "2b"
+print("---------------------")
+print("2b")
 
 import matplotlib.pyplot as plt
 plt.plot(year,mean_t,label="mean")
@@ -95,8 +95,8 @@ plt.ylabel("T (degrees)")
 #plt.show()
 
 
-print "---------------------"
-print "3a"
+print("---------------------")
+print("3a")
 
 def piecewise(x,a,b):
     if x < a:
@@ -107,8 +107,8 @@ def piecewise(x,a,b):
         return 1.0
 
 
-print "---------------------"
-print "3b"
+print("---------------------")
+print("3b")
 
 def test_piecewise():
     a = 0.0; b = 1.0;
@@ -122,8 +122,8 @@ def test_piecewise():
 
 
 
-print "---------------------"
-print "3c"
+print("---------------------")
+print("3c")
 
 import sys
 try:
@@ -137,11 +137,11 @@ except IndexError:
 except ValueError:
     print("The command line arguments must be numbers.")
     #sys.exit(1)
-print(piecewise(x,a,b))
+# print(piecewise(x,a,b))
 
 
-print "---------------------"
-print "4a"
+print("---------------------")
+print("4a")
 def pi_approx(n):
     s=0
     for k in range(1,n+1):
@@ -150,8 +150,8 @@ def pi_approx(n):
 print(pi_approx(10))
 print(pi_approx(100))
 
-print "---------------------"
-print "4b"
+print("---------------------")
+print("4b")
 from numpy import*
 from matplotlib.pyplot import*
 n_verdier=[i for i in range(1,51)]
@@ -163,7 +163,7 @@ legend(['pi_approx'])
 xlabel('n')
 ylabel('pi_approx')
 #show()
-print "---------------------"
+print("---------------------")
 
 
 
