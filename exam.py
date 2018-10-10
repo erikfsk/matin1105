@@ -2,35 +2,39 @@ print("---------------------")
 print("1a)")
 a = 4
 b = a
+b = 2
 a = a+b
-print(a) # 8 
+a = [1,2,3]
+b = a 
+b[1] = 3
+print(a) 
 
 print("---------------------")
 print("1b)")
 A = [[-1,0,1],[0,0,0],[10,9,8]]
-print(A[1][-1]) # 0
+print(A[-2][-1])
 
 print("---------------------")
 print("1c)")
 x = 6
 y = -2
 c = x >= 10 or y != -2
-print(c) #False
+print(c)
 
 print("---------------------")
 print("1d)")
 import numpy as np
 a = [1,2,3]
 a_np = np.array(a)
-print(a*2) # [1,2,3,1,2,3]
-print(a_np*2) # [2,4,6]
+print(a*2) 
+print(a_np*2)
 
 print("---------------------")
 print("1e)")
 S = 0
 for i in range(3):
-    S += i**2
-print(S) #5
+    S += i*2**i
+print(S)
 
 print("---------------------")
 print("1f)")
@@ -43,16 +47,16 @@ except IndexError:
     # sys.exit(1)
 except TypeError:
     print('Cannot convert %s to int' %A[2])
-    #sys.exit(1)
-#print(b)
+    # sys.exit(1)
+# print(b)
 
 print("---------------------")
 print("1g)")
 def poly(x,k):
     s = 0
-    for i in range(3):
-        s = s+2.0**i
-    return s
+    for i in range(k+1):
+        s = s+x**i
+    return s 
  
 def test_poly():
     k = 2

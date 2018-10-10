@@ -29,9 +29,17 @@ print("----------c--------")
 
 
 print("----------d--------")
-success = True #False
-assert True
+success = True 
+assert success
+if success:
+    None
+else:
+    raise AssertionError
 assert 1 == 1
+if 1==1:
+    None
+else:
+    raise AssertionError
 print("----------d--------")
 
 
@@ -88,12 +96,11 @@ print("----------g--------")
 
 
 print("----------h--------")
-x = range(1, 17, 5) #[1,6,11,16]
-y = x 				#[1,6,11,16]	
+x = range(1, 17, 5) 
+y = x 				
 
 if_statement_og_x_y_verdier = [[x_ != y_ and x_ > y_ + 1, [x_,y_]]\
-										 for x_ in [6,11] for y_ in [6,11]]
-
+										 for x_ in x[1:-1] for y_ in y[1:-1]]
 
 print("\n\n")
 print("\n\n")
@@ -103,7 +110,6 @@ for i in range(6,16,5):
 	for j in range(6,16,5):
 		print("i=",i,"j=",j)
 		listen_min.append([i != j and i > j + 1, [i,j]])
-
 print(listen_min)
 
 print("\n\n")
@@ -120,7 +126,7 @@ print("----------i--------")
 from numpy import *
 x = zeros(1)
 x = ones(10)
-print(x)
+print(x) 
 print(e**x[0],x*2)
 x = linspace(0,5,6)
 print(x)
@@ -143,7 +149,7 @@ print("----------j--------")
 
 print("----------k--------")
 with open("test_test.txt","r") as infile:
-	words = infile.readline().split()
+	words = infile.readline().split() 
 	print(words[2])
 print("----------k--------")
 
@@ -162,9 +168,9 @@ print("----------l--------")
 
 
 print("----------m--------")
-x = [i for i in range(3)]
-y = [2*j for j in x]
-print(x + y)
+x = [i for i in range(3)] 
+y = [2*j for j in x] 
+print(x + y) 
 print("----------m--------")
 
 
@@ -173,9 +179,9 @@ print("----------m--------")
 print("----------n--------")
 from numpy import *
 x = linspace(0,2,3)
-y = linspace(0,4,3) 
+y = linspace(0,4,3)
 
-print(x + y)
+print(x + y) 
 print("----------n--------")
 
 
@@ -188,9 +194,6 @@ y = [0,1,2]
 
 for x_i,y_i in zip(x,y):
 	print(h(x_i),h(y_i))
-	# 1 1 
-	# 0 1
-	# 0 1
 print("----------o--------")
 
 
