@@ -55,3 +55,46 @@ yticks(fontsize=20)
 xticks(fontsize=20)
 tight_layout()
 show()
+
+ax = subplot(111)
+for axis in ['top','bottom','left','right']:
+	ax.spines[axis].set_linewidth(1.5)
+
+
+
+
+#step by step
+x_start = pi/2
+x_start2 = 3.5*pi/2
+x_n = x_start
+x_n1 = x_start2
+
+#variables for while loop
+n = 100; i = 0; exact = pi; tol = 1e-15
+
+steps = []
+y_steps = []
+
+#visualizing step by step
+while i < n and abs(x_n%exact) > tol:
+	x_term = x_n1 - ((x_n1-x_n)/(f(x_n1)-f(x_n)))*f(x_n1)
+	plot([x_n,x_n1],[f(x_n),f(x_n1)],"go")
+	plot([x_n,x_n1],[f(x_n),f(x_n1)],"--",color="orange")
+	plot([x_term,x_term],[0,f(x_term)],"--",color="orange")
+	plot([x_term],[0],"*",color="red")
+	plot([x_term],[f(x_term)],"bo")
+	#exact solution
+	xlim(0.99*x_n,x_n1*1.01)
+	plot(x_list,f(x_list),"g--",label="exact function")
+	tick_params(labelsize=20, direction='in',top=True,right=True,left=True,bottom=True,length=5)
+	legend(loc="best",fontsize=15)
+	yticks(fontsize=20)
+	xticks(fontsize=20)
+	tight_layout()
+	#change the one with the same sign -+
+	if f(x_term) < 0:
+		x_n1 = x_term
+	elif f(x_term) > 0:
+		x_n = x_term
+	i +=1
+	show()
